@@ -1,0 +1,37 @@
+#include <iostream> 
+using namespace std;
+
+int main ()
+{
+	int cur, res=0; 
+	char op, pop= '+';  //coment
+ 			
+	cin >> cur; 
+	while (cin >> op) 
+	{
+		
+
+		if (op == '^'){	
+			cur=cur*cur;   //coment
+			cin >> op; 
+		}
+		if (pop == '+') { 
+			res=res +cur; //coment
+		}
+		if (pop == '-') {
+			res=res-cur;
+		}
+
+		pop=op;	
+		cin >> cur;
+		
+		if (op == ';'){
+			cout << res << endl;
+			res=0; 
+			pop='+'; 
+		}
+			
+			
+		}
+		return 0;
+	}
